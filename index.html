@@ -29,10 +29,11 @@ nav a{text-decoration:none;color:var(--muted);font-size:14px}
 nav a:hover{color:var(--text)}
 nav .brand{font-weight:600;color:var(--text);margin-right:auto}
 header{padding:64px 0 44px}
-.hero{display:grid;grid-template-columns:140px 1fr;gap:32px;align-items:center}
-.avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;background:var(--soft);filter:grayscale(0)}
+.hero{display:flex;gap:36px;align-items:center}
+.hero-text{flex:1;min-width:0}
+.avatar{flex:none;width:140px;height:140px;border-radius:50%;object-fit:cover;background:var(--soft)}
 h1{font-size:clamp(28px,5vw,38px);line-height:1.15;margin:0 0 6px;letter-spacing:-.02em}
-.role{color:var(--muted);margin:0 0 18px}
+.role{color:var(--muted);margin:0 0 20px;font-size:17px}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .btn{display:inline-block;padding:7px 15px;border:1px solid var(--text);border-radius:6px;font-size:14px;text-decoration:none;color:var(--text)}
 .btn:hover{background:var(--text);color:var(--bg)}
@@ -57,7 +58,8 @@ p{margin:0 0 12px}
 .tl .d span{color:var(--muted)}
 footer{padding:32px 0 48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
 @media (max-width:640px){
-  .hero{grid-template-columns:1fr} .avatar{width:104px;height:104px}
+  .hero{flex-direction:column;align-items:flex-start;gap:20px} .avatar{width:104px;height:104px}
+  header{padding:40px 0 32px}
   .tl{grid-template-columns:1fr;gap:2px} .tl .d{margin-bottom:12px}
 }
 </style>
@@ -74,11 +76,11 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:13px;border-top:1px soli
   <a href="#contact">Contact</a>
 </div></nav>
 
-<header class="wrap">
+<header><div class="wrap">
   <div class="hero">
     <!-- Add a photo named profile.jpg to the repo to show it here -->
     <img class="avatar" src="profile.jpg" alt="Ali Aldabbagh" onerror="this.style.display='none'">
-    <div>
+    <div class="hero-text">
       <h1>Ali Aldabbagh, Ph.D.</h1>
       <p class="role">Postdoctoral Research Scientist — Autonomous Systems<br>ACCESSLab, North Carolina A&amp;T State University · Greensboro, NC</p>
       <div class="links">
@@ -90,7 +92,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:13px;border-top:1px soli
       <p class="note">Open to research scientist, perception / autonomy engineering, and faculty roles · Authorized to work in the U.S.</p>
     </div>
   </div>
-</header>
+</div></header>
 
 <main class="wrap">
 
