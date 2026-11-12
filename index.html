@@ -187,7 +187,11 @@ const PROJECTS = [
     meta: "2019 – 2022 · Ph.D. work",
     desc: "Real-time terrain recognition (stairs, ramps, flat ground, obstacles) from a wearable depth camera and IMU for predictive control of prostheses and exoskeletons. >95% accuracy with partial occlusion.",
     tags: ["3D point clouds","IMU","ROS","C++"],
-    links: { Demo: "", Paper: "" }
+    links: {
+      Code: "https://github.com/Ali-Aldabbagh/terrain-detection",
+      Demo: "https://youtu.be/egoPBV8I34c",
+      Paper: "https://ieeexplore.ieee.org/abstract/document/9891830"
+    }
   }
 ];
 
@@ -195,9 +199,13 @@ const DATASETS = [
   {
     title: "3D Point Cloud Locomotion Dataset",
     meta: "UCLouvain Dataverse · public",
-    desc: "Wearable depth-camera and IMU recordings of human locomotion over stairs, ramps, and level ground, for terrain detection in assistive robotics.",
-    tags: ["Point clouds","Depth","IMU"],
-    links: { Download: "", DOI: "" }
+    desc: "64 recordings from a chest-mounted RealSense D435i (point clouds, IMU, RGB) of 8 people walking over stairs, ramps, and level ground on indoor and outdoor paths, with clear and partially occluded views. For terrain detection in assistive robotics.",
+    tags: ["Point clouds","Depth","IMU","ROS bags"],
+    links: {
+      Download: "https://doi.org/10.14428/DVN/S0LSIW",
+      GitHub: "https://github.com/Ali-Aldabbagh/terrain-pointcloud-dataset",
+      Kaggle: "https://www.kaggle.com/datasets/alialdabbagh/3d-point-cloud-dataset-of-various-terrains"
+    }
   }
 ];
 
